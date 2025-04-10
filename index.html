@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Project Idea Evaluator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <h1>AI Project Idea Evaluator</h1>
+            <p class="subheading">Get smart feedback on your idea instantly</p>
+        </section>
+
+        <section class="form-section">
+            <form id="evaluator-form">
+                <div class="form-group">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" placeholder="Enter your project title" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-description">Project Description</label>
+                    <textarea id="project-description" placeholder="Describe your project idea in detail..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-evaluate">
+                    <span>Evaluate Now</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+        </section>
+
+        <section class="results-section" id="results">
+            <div class="result-card category">
+                <div class="icon">🎯</div>
+                <h3>Category</h3>
+                <p id="category-result">EdTech</p>
+            </div>
+            <div class="result-card pitch">
+                <div class="icon">💡</div>
+                <h3>One-line Pitch</h3>
+                <p id="pitch-result">An AI-powered platform that transforms complex learning into interactive experiences.</p>
+            </div>
+            <div class="result-card feedback">
+                <div class="icon">🧠</div>
+                <h3>AI Feedback</h3>
+                <p id="feedback-result">Your idea has strong market potential. Consider focusing on specific learning outcomes and how you'll measure success. Explore partnerships with educational institutions for early adoption.</p>
+            </div>
+            <div class="result-card rating">
+                <div class="icon">⭐</div>
+                <h3>Innovation Rating</h3>
+                <div class="rating-container">
+                    <div class="rating-bar">
+                        <div class="rating-fill" id="rating-fill"></div>
+                    </div>
+                    <span id="rating-text">8.5/10</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Powered by AI</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
