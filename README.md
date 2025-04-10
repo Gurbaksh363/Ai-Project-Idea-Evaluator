@@ -1,6 +1,6 @@
 # 🚀 AI Project Idea Evaluator
 
-A sleek, modern web app built using **HTML, CSS, and JavaScript** that helps you evaluate AI project ideas using **Gemini Flash 2.0**.
+A sleek, modern web app built using **HTML, CSS, and JavaScript** that helps you evaluate AI project ideas using **Gemini Flash 1.5**.
 
 ## 💡 Features
 
@@ -18,7 +18,7 @@ A sleek, modern web app built using **HTML, CSS, and JavaScript** that helps you
 - HTML  
 - CSS (custom styling)  
 - JavaScript (vanilla)  
-- Gemini Flash 2.0 API (Google)
+- Gemini Flash 1.5 API (Google)
 
 ## 🔧 How to Use
 
