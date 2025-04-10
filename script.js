@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = document.getElementById('project-title').value;
         const description = document.getElementById('project-description').value;
 
-        // Prompt Gemini Flash 2.0
         const prompt = `
         Analyze this AI project idea and evaluate it:
         Title: ${title}
@@ -26,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }`;
 
         try {
-            const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDERu7GekmXUpAtj0g-gQFd4l9mjfpnq6k', {
+            // Replace you gemini API key here
+            const API_KEY = "AIzaSyDERu7GekmXUpAtj0g-gQFd4l9mjfpnq6k";
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
             let aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
             
-            // Clean the response if it contains markdown formatting
             if (aiText.includes('```json')) {
                 aiText = aiText.split('```json')[1].split('```')[0].trim();
             } else if (aiText.includes('```')) {
